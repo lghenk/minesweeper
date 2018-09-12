@@ -1,10 +1,10 @@
-#Minesweeper
+Minesweeper
 ---
 By Timo Heijne
 
 First week of third year school assignment
 
-##How to play/open the project
+## How to play/open the project
 
 1. Have Node installed
 2. Clone the project
