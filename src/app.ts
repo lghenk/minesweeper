@@ -20,8 +20,18 @@ canvas.height = NUM_TILES_Y * 20;
 canvas.width = NUM_TILES_X * 20;
 
 // Generate base grid
-const grid = new Grid(NUM_TILES_X, NUM_TILES_Y);
+let grid = new Grid(NUM_TILES_X, NUM_TILES_Y);
 grid.GenerateBombs(NUM_BOMBS);
+
+// Regsiter Reset
+document.getElementById('restartButton').onclick = () => {
+    grid = new Grid(NUM_TILES_X, NUM_TILES_Y);
+    grid.GenerateBombs(NUM_BOMBS);
+
+    isFirstClick = true;
+
+    draw();
+}
 
 // Register Click Handler
 canvas.onclick = (evt) => {
