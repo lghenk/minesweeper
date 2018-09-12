@@ -1,5 +1,6 @@
 import {Grid} from './grid'
 import { TileType } from './enums/tileData';
+import { GameSprite } from './gameSprites';
 
 // NOTE: The tiles are 20x20 pixels
 
@@ -66,7 +67,10 @@ canvas.onclick = (evt) => {
     draw();
 }
 
-draw();
+const gsprt = new GameSprite();
+gsprt._spritesheet.onload = () => {
+    draw();
+}
 
 function draw() {
     context.clearRect(0,0, canvas.width, canvas.height);

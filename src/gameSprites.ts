@@ -3,7 +3,7 @@ import './spritesheet.png'
 
 export class GameSprite {
     
-    private _spritesheet: any;
+    public _spritesheet: any;
     constructor() {
         this._spritesheet = new Image();
         this._spritesheet.src = "./spritesheet.png";
